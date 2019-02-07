@@ -12,7 +12,7 @@ Testing is not in and of itself hard. The most complicated part is setting up th
 
 ## Testing documentation
 
-Testing has its own documentation website (https://testing.quasar-framework.org), so head there for full info.
+Testing has its own documentation website ([https://testing.quasar-framework.org](https://testing.quasar-framework.org)), so head there for full info.
 
 <q-btn
   color="primary"
@@ -33,11 +33,12 @@ $ quasar ext --add @quasar/testing
 
 The lightweight extension installer will ask you which testing harnesses you want to install. Then it will install the respective extensions for these harnesses, which you can configure as you like. It is how multiple testing harnesses are ideally managed within a Quasar project.
 
-It will provide you with a new `quasar run` command that you can use to execute test-runners - and even your HMR dev environment at the same time. This approach can, for example, be quite helpful if you need to pass quasar.ctx to the test runner...
+It will provide you with a new `quasar run` command that you can use to execute test-runners - and even your HMR dev environment at the same time.
 
 ```
-# Example to run jest --watch && dev server
-$ quasar run @quasar/testing test --unit=jest.watch.coverage --dev=pwa
+# Example to run jest and cypress
+# The dev server will be started and stopped accordingly
+$ quasar run @quasar/testing test --unit jest --e2e cypress
 ```
 
 If you ever need to review your choices you can take a look at `quasar.extensions.json`.
@@ -47,14 +48,17 @@ If you don't want to install the base package, you don't have to do so. You can 
 ## Further Reading
 
 ### Books
+
 - [Testing Vue.js Applications](https://www.manning.com/books/testing-vue-js-applications) by Edd Yerburgh, the author of the `@vue/test-utils` repo
 - [Free Vue Testing Handbook](https://lmiller1990.github.io/vue-testing-handbook/)
 
 ### Tutorials
+
 - [Unit Testing Vue Router with Jest](https://medium.com/js-dojo/unit-testing-vue-router-1d091241312)
 - ... add your suggestions here
 
 ### Documentation
+
 - [@vue/test-utils](https://vue-test-utils.vuejs.org)
 - [jest 24](https://facebook.github.io/jest/)
 - [cypress](https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Cypress-Is-Simple)
